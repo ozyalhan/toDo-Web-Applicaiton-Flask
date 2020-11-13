@@ -34,7 +34,7 @@ def addToDo():
 
 @app.route("/complete/<string:id>")
 def completeToDo(id):
-    # first e gerek yok ama durabilir.
+    # first e gerek yok ama durabilir. baya baya gerek var tekli eleman sonucu ile all sonucu apayrı
     todo = ToDo.query.filter_by(id=id).first()
     # if todo.complete:
     #     todo.complete = False: #dönüşüm sağlandı.
